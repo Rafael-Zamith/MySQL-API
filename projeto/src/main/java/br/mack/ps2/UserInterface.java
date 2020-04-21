@@ -2,7 +2,7 @@ package br.mack.ps2;
 
 import java.util.Scanner;
 
-import br.mack.ps2.persistencia.ContaDAOMySQL;
+import br.mack.ps2.persistencia.*;
 import br.mack.ps2.interfaces.*;
 
 public class UserInterface {
@@ -40,7 +40,9 @@ public class UserInterface {
                     uic.Start();   
                     break;
                 case 2:
-                    System.out.println("Não Implementado!");
+                    ComputadorDAOMySQL daocomp = new ComputadorDAOMySQL();
+                    UserInterfaceComputadores uicomp = new UserInterfaceComputadores(daocomp);
+
                     break;
                 case 3:
                     System.out.println("Não Implementado!");
