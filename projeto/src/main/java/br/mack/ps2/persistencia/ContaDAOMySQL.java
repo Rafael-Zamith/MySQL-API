@@ -26,7 +26,7 @@ public class ContaDAOMySQL implements ContaDAO {
             stm.setInt(1, conta.getId());  
             stm.setString(2, conta.getNome());
             stm.setInt(3, conta.getAgencia()); 
-            stm.setInt(4, conta.getSaldo());
+            stm.setBigDecimal(4, conta.getSaldo());
 
 
             int reg = stm.executeUpdate();
@@ -61,7 +61,7 @@ public class ContaDAOMySQL implements ContaDAO {
                 conta.setId(rs.getInt("id"));
                 conta.setNome(rs.getString("nome"));
                 conta.setAgencia(rs.getInt("agencia"));
-                conta.setSaldo(rs.getInt("saldo"));
+                conta.setSaldo(rs.getBigDecimal("saldo"));
                 contas.add(conta);
             }
             return contas;
@@ -90,7 +90,7 @@ public class ContaDAOMySQL implements ContaDAO {
             stm.setInt(4, conta.getId());
             stm.setString(1, conta.getNome());
             stm.setInt(2, conta.getAgencia());
-            stm.setInt(3, conta.getSaldo());
+            stm.setBigDecimal(3, conta.getSaldo());
 
             int reg = stm.executeUpdate();
 

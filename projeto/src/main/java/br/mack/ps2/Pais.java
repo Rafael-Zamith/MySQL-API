@@ -30,11 +30,22 @@ public class Pais {
         this.continente = continente;
     }
 
-    public double getPopulação() {
+    public double getPopulacao() {
         return populacao;
     }
 
     public void setPopulacao(double populacao) {
         this.populacao = populacao;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", nome='" + getNome() + "'" +
+            ", continente='" + getContinente() + "'" +
+            ", populacao='" + getPopulacao() + "'" +
+            "}";
+    }
+
 }

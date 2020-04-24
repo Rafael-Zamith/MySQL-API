@@ -4,10 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class MySQLConnection {
-    private String bd = "Contas";
-    private String url = "jdbc:mysql://127.0.0.1:32775/" + bd;
+    private String bd = "trabalhops2";
+    private String url = "jdbc:mysql://192.168.0.12:3306/" + bd;
     private String user = "root";
-    private String pswd = "root";
+    private String pswd = "WzYFLqKQ2KfvARE4";
 
     public Connection getConnection() {
         try {

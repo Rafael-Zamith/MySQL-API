@@ -42,15 +42,18 @@ public class UserInterface {
                 case 2:
                     ComputadorDAOMySQL daocomp = new ComputadorDAOMySQL();
                     UserInterfaceComputadores uicomp = new UserInterfaceComputadores(daocomp);
-
+                    uicomp.Start();
                     break;
                 case 3:
-                    System.out.println("Não Implementado!");
+                    PaisDAOMySQL daopais = new PaisDAOMySQL();
+                    UserInterfacePaises uipai = new UserInterfacePaises(daopais);
+                    uipai.Start();
                     break;
                 case 4:
                     System.out.println("end!");
+                    break;
                 default:
-                System.out.println("Opção Invalida!");
+                    System.out.println("Opção Invalida!");
                     break;
             }
         } while (op != 4);

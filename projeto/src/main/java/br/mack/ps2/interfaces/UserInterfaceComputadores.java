@@ -63,8 +63,8 @@ public class UserInterfaceComputadores {
     private void create() {
         Computador computador = new Computador();
 
-        System.out.println("informe o id do computador: ");
-        computador.setId(in.nextInt());
+        List<Computador> computadores = dao.read();
+        computador.setId(computadores.size()+1);
         System.out.println("Informe a marca do computador: ");
         computador.setMarca(in.next());
         System.out.println("Informe o processador do computador: ");

@@ -10,12 +10,12 @@ import br.mack.ps2.Computador;
 
 public class ComputadorDAOMySQL implements ComputadorDAO {
     private String table = "computadores";
-    private String createSQL = "INSERT INTO " + table + " VALUES (?, ?, ?, ?)";
+    private String createSQL = "INSERT INTO " + table + " VALUES (?, ?, ?, ?, ?)";
     private String readSQL = "SELECT * FROM " + table;
     private String updateSQL = "UPDATE " + table + " SET marca =?, processador=?, RAM=?, tamDisco=? WHERE id=? ";
     private String deleteSQL = "DELETE FROM " + table + " WHERE id=?";
 
-    private final MySQLConnection1 mysql = new MySQLConnection1();
+    private final MySQLConnection mysql = new MySQLConnection();
 
     @Override
     public boolean create(Computador computador) {

@@ -21,7 +21,7 @@ public class Computador {
         return this.marca;
     }
 
-    public void setMarca(String nome) {
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
@@ -45,7 +45,7 @@ public class Computador {
         return this.DiskSize;
     }
 
-    public void setDiskSize(int DiskSIze) {
+    public void setDiskSize(int DiskSize) {
         this.DiskSize = DiskSize;
     }
 

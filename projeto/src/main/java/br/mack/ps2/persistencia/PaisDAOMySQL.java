@@ -9,7 +9,7 @@ public class PaisDAOMySQL implements PaisDAO {
     private String table = "paises";
     private String createSQL = "INSERT INTO " + table + " VALUES (?, ?, ?, ?)";
     private String readSQL = "SELECT * FROM " + table;
-    private String updateSQL = "UPDATE " + table + " SET pais=?, continente=?, populacao=?, WHERE id=?";
+    private String updateSQL = "UPDATE " + table + " SET nome=?, continente=?, populacao=?, WHERE id=?";
     private String deleteSQL = "DELETE FROM " + table + "WHERE id=?";
 
     private final MySQLConnection mysql = new MySQLConnection();
@@ -22,7 +22,7 @@ public class PaisDAOMySQL implements PaisDAO {
             stm.setInt(1, pais.getId());
             stm.setString(2, pais.getNome());
             stm.setString(3, pais.getContinente());
-            stm.setDouble(4, pais.getPopulação());
+            stm.setDouble(4, pais.getPopulacao());
 
             int registros = stm.executeUpdate();
 
@@ -84,7 +84,7 @@ public class PaisDAOMySQL implements PaisDAO {
 
             stm.setString(1, pais.getNome());
             stm.setString(2, pais.getContinente());
-            stm.setDouble(3, pais.getPopulação());
+            stm.setDouble(3, pais.getPopulacao());
             stm.setInt(4, pais.getId());
 
             int registros = stm.executeUpdate();
