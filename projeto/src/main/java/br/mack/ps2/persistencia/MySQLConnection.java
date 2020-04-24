@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class MySQLConnection {
     private String bd = "trabalhops2";
-    private String url = "jdbc:mysql://192.168.0.12:3306/" + bd;
+    private String url = "jdbc:mysql://dorime.dlinkddns.com:3306/" + bd;
     private String user = "root";
     private String pswd = "WzYFLqKQ2KfvARE4";
 
