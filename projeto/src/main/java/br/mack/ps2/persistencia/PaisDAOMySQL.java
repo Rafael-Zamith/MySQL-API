@@ -10,7 +10,7 @@ public class PaisDAOMySQL implements PaisDAO {
     private String createSQL = "INSERT INTO " + table + " VALUES (?, ?, ?, ?)";
     private String readSQL = "SELECT * FROM " + table;
     private String updateSQL = "UPDATE " + table + " SET nome=?, continente=?, populacao=? WHERE id=?";
-    private String deleteSQL = "DELETE FROM " + table + "WHERE id=?";
+    private String deleteSQL = "DELETE FROM " + table + " WHERE id=?";
 
     private final MySQLConnection mysql = new MySQLConnection();
 
