@@ -116,13 +116,16 @@ public class UserInterfaceComputadores {
         int id = in.nextInt();
         List<Computador> computadors = dao.read();
         int i;
+        boolean found = false;
         for (i = 0; i < computadors.size(); i++) {
             if (id == computadors.get(i).getId()) {
                 System.out.println("Achamos esse computador: ");
                 System.out.println(computadors.get(i));
-            } else
-                System.out.println("Não encontramos nenhum computador com o mesmo id! ");
+                break;
+            }
         }
+        if (!found)
+            System.out.println("não encontramos nenhuma conta com o mesmo id! ");
         System.out.println("Deseja realmente apagá-lo? ");
         System.out.println("1. sim");
         System.out.println("2. não");

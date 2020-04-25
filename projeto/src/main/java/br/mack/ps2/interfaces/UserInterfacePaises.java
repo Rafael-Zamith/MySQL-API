@@ -108,14 +108,17 @@ public class UserInterfacePaises {
         List<Pais> paises = dao.read();
 
         int i;
+        boolean found = false;
         for(i = 0; i< paises.size(); i++){
             if(id == paises.get(i).getId()){
                 System.out.println("Achei o País: ");
                 System.out.println(paises.get(i));
-            }else{
-                System.out.println("Não foi encontrado nenhum país com esse id");
+                break;
             }
         }
+        if (!found)
+            System.out.println("não encontramos nenhuma conta com o mesmo id! ");
+        
         System.out.println("Deseja mesmo apagar este país?");
         System.out.println("1 - Sim!");
         System.out.println("2 - Não!");
