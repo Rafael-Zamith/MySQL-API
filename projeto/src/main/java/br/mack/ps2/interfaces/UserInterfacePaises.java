@@ -59,7 +59,7 @@ public class UserInterfacePaises {
     private void create (){
         Pais pais = new Pais();
         List<Pais> paises = dao.read();
-        pais.setId(paises.size()+1);
+        pais.setId(1+(paises.get(paises.size()-1).getId()));
         System.out.println("Dê o nome do país: ");
         pais.setNome(in.next());
         System.out.println("Dê o continente em que o país se encontra: ");
