@@ -12,7 +12,7 @@ public class ContaDAOMySQL implements ContaDAO {
     private String table = "contas";
     private String createSQL = "INSERT INTO " + table + " VALUES (?, ?, ?, ?)";
     private String readSQL = "SELECT * FROM " + table;
-    private String updateSQL = "UPDATE " + table + " SET nome =?, agencia=?, saldo=?, WHERE id=? ";
+    private String updateSQL = "UPDATE " + table + " SET nome =?, agencia=?, saldo=? WHERE id=? ";
     private String deleteSQL = "DELETE FROM " + table + " WHERE id=?";
 
     private final MySQLConnection mysql = new MySQLConnection();
