@@ -64,7 +64,10 @@ public class UserInterfaceComputadores {
         Computador computador = new Computador();
 
         List<Computador> computadores = dao.read();
-        computador.setId(1+(computadores.get(computadores.size()-1).getId()));
+        if(computadores.size()>0)
+            computador.setId(1+(computadores.get(computadores.size()-1).getId()));
+        else
+            computador.setId(0);
         System.out.println("Informe a marca do computador: ");
         computador.setMarca(in.next());
         System.out.println("Informe o processador do computador: ");

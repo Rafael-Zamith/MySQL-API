@@ -64,7 +64,10 @@ public class UserInterfaceContas {
         Conta conta = new Conta();
 
         List<Conta> contas = dao.read();
-        conta.setId(1+(contas.get(contas.size()-1).getId()));
+        if(contas.size()>0)
+            conta.setId(1+(contas.get(contas.size()-1).getId()));
+        else
+            conta.setId(0);
         System.out.println("Informe o nome do dono da conta: ");
         conta.setNome(in.next());
         System.out.println("Informe a agencia da conta: ");
